@@ -1,0 +1,53 @@
+button {
+  background-color: blue;
+  color: white;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+}
+
+body {
+    background-image: url("images/blue\ background.jpg");
+  }
+
+
+button:hover {
+  opacity: 0.8;
+}
+
+    .imgcontainer {
+        text-align: top left;
+        margin: 10px 0 2px 0;
+      }
+      
+      img.avatar {
+        width: 20%;
+      }
+      
+      span.psw {
+        float: top left;
+        padding-top: 12px;
+      }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
