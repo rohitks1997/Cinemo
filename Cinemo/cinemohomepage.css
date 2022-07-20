@@ -13,6 +13,9 @@ body {
     background-image: url("images/blue\ background.jpg");
   }
 
+.navbar a.right {
+    float: right;
+  }
 
 button:hover {
   opacity: 0.8;
