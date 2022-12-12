@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+  <title>Cinemo Sign-In</title>
+
+</head>
+
+<body>
+  <div class="center1">
+    <div class="page">
+      <div class="imgcontainer">
+        <img src="images/Cinemo Logo.JPG" alt="Avatar" class="avatar">
+      </div>
+            <form action="checksignin.php" method="POST">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <div class="login">
+                <button type="submit" name="customerLogin">Sign In</button>
+                <br></br>
+                <button type="submit" name="adminLogin">Sign In as Admin</button>
+                <br></br>
+                <button type="submit" name="staffLogin">Sign In as Staff</button>
+              </div>
+            </form>
+            <div class="signin_link">
+              <span>Don't have an account ?<a href="signup.php">Sign Up</a></span>
+            </div>
+
+          </div> <!-- .movie-list -->
+
+      </div>
+    </div>
+
+
+
+</body>
+
+</html>
