@@ -73,6 +73,7 @@
     font-family: 'verdana', sans-serif;
     padding: 14px 20px;
     margin: 8px 0;
+    align-items: center;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -86,7 +87,7 @@
   .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
-    padding-top: 50px;
+    padding-top: 40px;
   }
   
   img.avatar {
