@@ -593,7 +593,7 @@
   }
   
   footer {
-    color: white;
+    color: black;
   }
   
   .site-footer {
@@ -630,7 +630,7 @@
   }
   
   .site-footer a {
-    color: white;
+    color: black;
     -webkit-transition: .3s ease;
     transition: .3s ease;
   }
@@ -640,7 +640,8 @@
   }
   
   .site-footer .colophon {
-    padding-top: 30px;
+    padding-top: 90px;
+    text-align: center;
   }
   
   .widget-title {
