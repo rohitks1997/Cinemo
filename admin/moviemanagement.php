@@ -22,7 +22,7 @@
 
 <div id="site-content">
         <header>
-                <a href="index.html" id="branding">
+                <a href="" id="branding">
                 <img src="Cinemo Logo.JPG" alt="logo" class="logo" width="150" padding-right="30px">
                 </a> <!-- #branding -->
                 <nav>
