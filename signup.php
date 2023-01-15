@@ -50,7 +50,7 @@
         <button type="submit" name="customerLogin">Sign Up</button>
     </div>   
     <div class="signin_link">
-        <span>Already created an account? <a href="signin.html">Sign In</a></span>
+        <span>Already created an account? <a href="signin.php">Sign In</a></span>
     </div>
 
 </div>
