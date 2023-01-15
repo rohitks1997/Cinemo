@@ -60,9 +60,8 @@
 				</div>
 				<div class="colophon">Copyright 2022 Cinemo</div>
 			</div> <!-- .container -->
-
 	</footer>
-	</div>
+	
 	<!-- Default snippet for navigation -->
 
 
