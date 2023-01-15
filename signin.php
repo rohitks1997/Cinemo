@@ -46,7 +46,7 @@
         <button type="submit" name="staffLogin">Sign In as Staff</button>
     </div>   
     <div class="signin_link">
-        <span>Don't have an account? <a href="signup.html">Sign Up</a></span>
+        <span>Don't have an account? <a href="signup.php">Sign Up</a></span>
     </div>
 
 </div>
