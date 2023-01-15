@@ -27,7 +27,7 @@
                 </a> <!-- #branding -->
                 <nav>
             <ul class="nav-area">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="homepage.php">Home</a></li>
                 <li><a href="../signout.php">Log Out</a></li>
             </ul> 
         </nav>
