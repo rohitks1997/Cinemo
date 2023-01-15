@@ -61,12 +61,17 @@
 	</main>
 
 
-	</div> <!-- .container -->
+	<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+				</div>
+				<div class="colophon">Copyright 2022 Cinemo</div>
+			</div> <!-- .container -->
 
-	</div> <!-- .container -->
-
-	</footer>
-	</div>
+		</footer>
+		
 	<!-- Default snippet for navigation -->
 
 
