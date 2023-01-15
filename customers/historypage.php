@@ -29,15 +29,15 @@
 <body>
 <div id="site-content">
         <header>
-                <a href="index.html" id="branding">
+                <a href="" id="branding">
                 <img src="Cinemo Logo.JPG" alt="logo" class="logo" width="150" padding-right="30px">
                 </a> <!-- #branding -->
                 <nav>
             <ul class="nav-area">
-                <li><a href="homepage.html">Home</a></li>
-				<li><a href="aboutpage.html">About</a></li>
-				<li><a href="allmovies.html">Movies</a></li>
-				<li><a href="historypage.html">History</a></li>
+                <li><a href="homepage.php">Home</a></li>
+				<li><a href="aboutpage.php">About</a></li>
+				<li><a href="allmovies.php">Movies</a></li>
+				<li><a href="historypage.php">History</a></li>
                 <li><a href="">Log Out</a></li>
             </ul> 
         </nav>
