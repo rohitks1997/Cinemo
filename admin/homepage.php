@@ -22,12 +22,12 @@
 
 <div id="site-content">
         <header>
-                <a href="index.html" id="branding">
+                <a href="" id="branding">
                 <img src="Cinemo Logo.JPG" alt="logo" class="logo" width="150" padding-right="30px">
                 </a> <!-- #branding -->
                 <nav>
             <ul class="nav-area">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="homepage.php">Home</a></li>
                 <li><a href="../signout.php">Log Out</a></li>
             </ul> 
         </nav>
