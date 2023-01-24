@@ -33,10 +33,10 @@
                 </a> <!-- #branding -->
                 <nav>
             <ul class="nav-area">
-                <li><a href="homepage.html">Home</a></li>
-				<li><a href="aboutpage.html">About</a></li>
-				<li><a href="allmovies.html">Movies</a></li>
-				<li><a href="historypage.html">History</a></li>
+                <li><a href="homepage.php">Home</a></li>
+				<li><a href="aboutpage.php">About</a></li>
+				<li><a href="allmovies.php">Movies</a></li>
+				<li><a href="historypage.php">History</a></li>
                 <li><a href="">Log Out</a></li>
             </ul> 
         </nav>
@@ -62,7 +62,7 @@
 		<div class="carousel-caption">
 			<h3>Welcome to Cinemo</h3>
 			<p>To know more please click this button below</p>
-				<button href="aboutpage.html">About Us</button>
+				<button onclick="location.href='aboutpage.php' ">About Us</button>
 		</div>
 	  </div>
 	  <div class="carousel-item">
@@ -70,12 +70,17 @@
 		<div class="carousel-caption">
 			<h3>Movies</h3>
 			<p>To explore movies please click this button below</p>
-				<button href="allmovies.html">About Us</button>
+			<button onclick="location.href='allmovies.php' ">Movies</button>
 		</div>
 	  </div>
 	  <div class="carousel-item">
 		<img src="cinema branch.jpg" alt="New York" width="1500" height="500">
-	  </div>
+		<div class="carousel-caption">
+		<h3>History</h3>
+			<p>To explore the movies you have watched please click this button below</p>
+			<button onclick="location.href='historypage.php' ">History</button>
+	  	</div>
+		</div>
 	</div>
 	
 	<!-- Left and right controls/icons -->
