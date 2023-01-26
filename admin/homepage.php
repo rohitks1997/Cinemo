@@ -50,7 +50,7 @@
 						<div class="text-center">
 							<div class="btn-group">
 								<button onclick="document.location='cinemamangement.php'">Cinema Management</button>
-								<button onclick="document.location='theaterroommanagement.php'">Theater Room Management</button>
+								<button onclick="document.location='theater_room_list.php'">Theater Room Management</button>
 								<button onclick="document.location='moviemanagement.php'">Movie Management</button>
 							</div>
 						</div>
