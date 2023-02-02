@@ -43,7 +43,6 @@
         <br></br>
         <button onclick="document.location='admin/homepage.php'">Sign In as Admin</button>
         <br></br>
-        <button onclick="document.location='staff/homepage.php'">Sign In as Staff</button>
     </div>   
     <div class="signin_link">
         <span>Don't have an account? <a href="signup.php">Sign Up</a></span>
