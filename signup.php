@@ -28,7 +28,7 @@
         </div>
     <div class="col-lg-7">
             <div class="signin">
-            <h3>Please Sign-In</h3>
+            <h3>Please Sign-Up</h3>
             </div>
             <div class="firstname">
             <label for="uname"><b>First Name</b></label>
@@ -47,7 +47,7 @@
             </div>
             <input type="password" placeholder="Enter Password" name="psw" required>
     <div class="login">
-        <button type="submit" name="customerLogin">Sign Up</button>
+    <button onclick="document.location='customers/homepage.php'">Sign Up</button>
     </div>   
     <div class="signin_link">
         <span>Already created an account? <a href="signin.php">Sign In</a></span>
