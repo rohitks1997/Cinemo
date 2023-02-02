@@ -36,7 +36,7 @@
 				<li><a href="aboutpage.php">About</a></li>
 				<li><a href="allmovies.php">Movies</a></li>
 				<li><a href="historypage.php">History</a></li>
-                <li><a href="">Log Out</a></li>
+                <li><a href="../signin.php">Log Out</a></li>
             </ul> 
         </nav>
         </header>
