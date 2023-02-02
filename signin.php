@@ -39,11 +39,11 @@
             </div>
             <input type="password" placeholder="Enter Password" name="psw" required>
     <div class="login">
-        <button type="submit" name="customerLogin">Sign In</button>
+        <button onclick="document.location='customers/homepage.php'">Sign In</button>
         <br></br>
-        <button type="submit" name="adminLogin">Sign In as Admin</button>
+        <button onclick="document.location='admin/homepage.php'">Sign In as Admin</button>
         <br></br>
-        <button type="submit" name="staffLogin">Sign In as Staff</button>
+        <button onclick="document.location='staff/homepage.php'">Sign In as Staff</button>
     </div>   
     <div class="signin_link">
         <span>Don't have an account? <a href="signup.php">Sign Up</a></span>
