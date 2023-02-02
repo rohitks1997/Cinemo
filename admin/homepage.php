@@ -28,7 +28,7 @@
                 <nav>
             <ul class="nav-area">
                 <li><a href="homepage.php">Home</a></li>
-                <li><a href="../signout.php">Log Out</a></li>
+                <li><a href="../signin.php">Log Out</a></li>
             </ul> 
         </nav>
         </header>
@@ -52,6 +52,7 @@
 								<button onclick="document.location='cinemamangement.php'">Cinema Management</button>
 								<button onclick="document.location='theater_room_list.php'">Theater Room Management</button>
 								<button onclick="document.location='moviemanagement.php'">Movie Management</button>
+								<button onclick="document.location='seatmaintenance.php'">Seat Maintenance</button>
 							</div>
 						</div>
 					</div>
