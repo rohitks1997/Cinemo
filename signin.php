@@ -43,10 +43,10 @@
         <br></br>
     </div>   
     <div class="signin_link">
-        <span>Don't have an account? <a href="signup.php">Sign Up</a></span>
+        <span>Don't have an account? <a style="text-decoration:none" href="signup.php">Sign Up</a></span>
     </div>
     <div class="role_link">
-        <a href="signup.php">Admin</a></span>
+        <a style="text-decoration:none" href="signup.php">Admin</a></span>
     </div>  
 </div>
 </section>
