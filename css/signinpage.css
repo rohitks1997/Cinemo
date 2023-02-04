@@ -124,8 +124,7 @@ body {
 
   .role_link {
     margin: 30px;
-    text-align: left;
-    padding-right: 65px;
+    text-align: center;
     font-family: "Lato", sans-serif;
   }
 /* Change styles for cancel button and signup button on extra small screens */
