@@ -50,7 +50,7 @@
     <button onclick="document.location='customers/homepage.php'">Sign Up</button>
     </div>   
     <div class="signin_link">
-        <span>Already created an account? <a href="signin.php">Sign In</a></span>
+        <span>Already created an account? <a style="text-decoration:none" href="signin.php">Sign In</a></span>
     </div>
 
 </div>
