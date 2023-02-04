@@ -35,6 +35,7 @@
                 <li><a href="homepage.php">Home</a></li>
 				<li><a href="aboutpage.php">About</a></li>
 				<li><a href="allmovies.php">Movies</a></li>
+				<li><a href="allcinemas.php">Cinema</a></li>
 				<li><a href="historypage.php">History</a></li>
                 <li><a href="../signin.php">Log Out</a></li>
             </ul> 
