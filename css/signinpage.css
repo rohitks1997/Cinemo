@@ -121,6 +121,13 @@ body {
     text-align: left;
     padding-left:205px;
   }
+
+  .role_link {
+    margin: 30px;
+    text-align: left;
+    padding-right: 65px;
+    font-family: "Lato", sans-serif;
+  }
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
 }
