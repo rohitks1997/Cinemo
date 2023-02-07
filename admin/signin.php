@@ -40,7 +40,6 @@
             <input type="password" placeholder="Enter Password" name="psw" required>
     <div class="login">
         <button onclick="document.location='homepage.php'">Sign In</button>
-        <br></br>
     </div>   
     <div class="signin_link">
         <a style="text-decoration:none" href="../signin.php">Customer</a></span>
