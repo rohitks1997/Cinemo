@@ -46,7 +46,7 @@
         <span>Don't have an account? <a style="text-decoration:none" href="signup.php">Sign Up</a></span>
     </div>
     <div class="role_link">
-        <a style="text-decoration:none" href="signup.php">Admin</a></span>
+        <a style="text-decoration:none" href="admin/signin.php">Admin</a></span>
     </div>  
 </div>
 </section>
