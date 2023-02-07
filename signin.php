@@ -13,6 +13,7 @@
 
 	<!-- Loading main css file -->
     <link rel="stylesheet" href="css/signinpage.css"> 
+    <link rel="stylesheet" href="link.css"> 
 
 	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
@@ -45,9 +46,9 @@
     <div class="signin_link">
         <span>Don't have an account? <a style="text-decoration:none" href="signup.php">Sign Up</a></span>
     </div>
-    <div class="role_link">
-        <a style="text-decoration:none" href="admin/signin.php">Admin</a></span>
-    </div>  
+    <div class="signin_link_2">
+        <a style="text-decoration:none" href="admin/signin.php">Admin</a>
+    </div>
 </div>
 </section>
 
