@@ -13,6 +13,7 @@
 
 	<!-- Loading main css file -->
     <link rel="stylesheet" href="css/signinpage.css"> 
+    <link rel="stylesheet" href="sessionmessage.css"> 
 
 	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
@@ -20,42 +21,68 @@
 		<![endif]-->
 </head>
 
-<section class="Form">
-<div class="center">
-    <div class="row">
-        <div class="col-lg-5">
-            <img src="images/Cinemo Logo (No Background).png" class="avatar" alt="" width="400">
+    <div class="center">
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="images/Cinemo Logo (No Background).png" class="avatar" alt="" width="400">
+            </div>
+        <div class="col-lg-7">
+            <form action="signup-check.php" method="post">
+                <div class="signin">
+                <h3>Please Sign-Up</h3>
+                </div>
+                    <?php if (isset($_GET['error'])) { ?>
+     		            <p class="error"><?php echo $_GET['error']; ?></p>
+     	            <?php } ?>
+                    <?php if (isset($_GET['success'])) { ?>
+                        <p class="success"><?php echo $_GET['success']; ?></p>
+                    <?php } ?>
+                <div class="firstname">
+                <label for="uname"><b>First Name</b></label>
+                </div>
+                 <?php if (isset($_GET['name'])) { ?>
+                     <input type="text" 
+                        name="name" 
+                        placeholder="Enter First Name"
+                        value="<?php echo $_GET['name']; ?>"><br>
+                <?php }else{ ?>
+                     <input type="text" 
+                      name="name" 
+                      placeholder="Enter First Name"><br>
+                <?php }?>                
+                <div class="username">
+                <b>Username</b>
+                </div>
+                <?php if (isset($_GET['uname'])) { ?>
+                <input type="text" 
+                      name="uname" 
+                      placeholder="Enter User Name"
+                      value="<?php echo $_GET['uname']; ?>"><br>
+                <?php }else{ ?>
+                <input type="text" 
+                    name="uname" 
+                    placeholder="Enter User Name"><br>
+                <?php }?>
+                <div class="password">
+                    <b>Password</b>
+                </div>
+                <input type="password" 
+                 name="password" 
+                 placeholder="Password"><br>
+                 <div class="password">
+                    <b>Re-Enter Password</b>
+                </div>
+                <input type="password" 
+                 name="password" 
+                 placeholder="Password"><br>
+                <div class="login">
+                    <button type="submit">Sign Up</button>
+                </div>   
+                <div class="signin_link">
+                    <span>Already created an account? <a style="text-decoration:none" href="signin.php">Sign In</a></span>
+                </div>
+            </form>
         </div>
-    <div class="col-lg-7">
-            <div class="signin">
-            <h3>Please Sign-Up</h3>
-            </div>
-            <div class="firstname">
-            <label for="uname"><b>First Name</b></label>
-            </div>
-            <input type="text" placeholder="Enter Username" name="username" required>
-            <div class="surname">
-            <label for="uname"><b>Last Name</b></label>
-            </div>
-            <input type="text" placeholder="Enter Username" name="username" required>
-            <div class="username">
-            <label for="uname"><b>Username</b></label>
-            </div>
-            <input type="text" placeholder="Enter Username" name="username" required>
-            <div class="password">
-            <label for="psw"><b>Password</b></label>
-            </div>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-    <div class="login">
-    <button onclick="document.location='customers/homepage.php'">Sign Up</button>
-    </div>   
-    <div class="signin_link">
-        <span>Already created an account? <a style="text-decoration:none" href="signin.php">Sign In</a></span>
-    </div>
-
-</div>
-</section>
-
 
 <script src="../js/jquery-1.11.1.min.js"></script>
 <script src="../js/plugins.js"></script>
