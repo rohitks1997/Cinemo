@@ -27,6 +27,7 @@
             <img src="images/Cinemo Logo (No Background).png" class="avatar" alt="" width="400">
         </div>
     <div class="col-lg-7">
+        <form action="signin-check.php" method="post">
             <div class="signin">
             <h3>Please Sign-In</h3>
             </div>
@@ -50,7 +51,8 @@
             </div>
             <div class="signin_link_2">
                 <a style="text-decoration:none" href="admin/signin.php">Admin</a>
-         </div>
+            </div>
+        </form>
     </div>
 </div>
 
