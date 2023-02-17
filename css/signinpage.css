@@ -139,14 +139,6 @@ body {
     border-radius: 5px;
     margin: 20px auto;
  }
-
- form {
-	width: 500px;
-	border: 2px solid #ccc;
-	padding: 30px;
-	background: #fff;
-	border-radius: 15px;
-}
  
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
