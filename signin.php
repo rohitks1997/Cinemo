@@ -21,7 +21,6 @@
 		<![endif]-->
 </head>
 
-<section class="Form">
 <div class="center">
     <div class="row">
         <div class="col-lg-5">
@@ -31,26 +30,29 @@
             <div class="signin">
             <h3>Please Sign-In</h3>
             </div>
+            <?php if (isset($_GET['error'])) { ?>
+     		<p class="error"><?php echo $_GET['error']; ?></p>
+     	    <?php } ?>
             <div class="username">
-            <label for="uname"><b>Username</b></label>
+                <b>Username</b>
             </div>
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <input type="text" name="uname" placeholder="User Name"><br>
             <div class="password">
-            <label for="psw"><b>Password</b></label>
+                <b>Password</b>
             </div>
             <input type="password" placeholder="Enter Password" name="psw" required>
-    <div class="login">
-        <button onclick="document.location='customers/homepage.php'">Sign In</button>
-        <br></br>
-    </div>   
-    <div class="signin_link">
-        <span>Don't have an account? <a style="text-decoration:none" href="signup.php">Sign Up</a></span>
-    </div>
-    <div class="signin_link_2">
-        <a style="text-decoration:none" href="admin/signin.php">Admin</a>
+            <div class="login">
+                 <button type="submit">Login</button>
+                <br></br>
+            </div>   
+            <div class="signin_link">
+                <span>Don't have an account? <a style="text-decoration:none" href="signup.php">Sign Up</a></span>
+            </div>
+            <div class="signin_link_2">
+                <a style="text-decoration:none" href="admin/signin.php">Admin</a>
+         </div>
     </div>
 </div>
-</section>
 
 
 <script src="../js/jquery-1.11.1.min.js"></script>
