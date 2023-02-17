@@ -68,6 +68,6 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 	}
 	
 }else{
-	header("Location: customers/homepage.php");
+	header("Location: signup.php");
 	exit();
 }
