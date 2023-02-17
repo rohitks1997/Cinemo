@@ -34,7 +34,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
             if ($row['username'] === $uname && $row['password'] === $pass) {
             	$_SESSION['username'] = $row['username'];
             	$_SESSION['name'] = $row['name'];
-            	$_SESSION['user_id'] = $row['user_id'];
+            	$_SESSION['id'] = $row['id'];
             	header("Location: customers/homepage.php");
 		        exit();
             }else{
