@@ -14,6 +14,7 @@
 	<!-- Loading main css file -->
     <link rel="stylesheet" href="css/signinpage.css"> 
     <link rel="stylesheet" href="link.css"> 
+    <link rel="stylesheet" href="sessionmessage.css"> 
 
 	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
@@ -31,9 +32,11 @@
             <div class="signin">
             <h3>Please Sign-In</h3>
             </div>
+            <div class="sessionmessage">
             <?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	    <?php } ?>
+            </div>
             <div class="username">
                 <b>Username</b>
             </div>
@@ -41,7 +44,7 @@
             <div class="password">
                 <b>Password</b>
             </div>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" name="password" placeholder="Password"><br>
             <div class="login">
                  <button type="submit">Login</button>
                 <br></br>
