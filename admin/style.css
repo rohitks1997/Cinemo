@@ -168,7 +168,7 @@ td img {
 
 
 .btn-group button {
-  background-color: rgb(236, 90, 217);
+  background-color: purple;
   /* Green background */
   border: 1px green;
   /* Green border */
@@ -480,6 +480,7 @@ body {
 .row {
   margin-left: -15px;
   margin-right: -15px;
+  padding-left: 80px;
   padding-left: 65px;
   *zoom: 1;
 }
@@ -550,8 +551,14 @@ td {
 .btn-addcinema {
   margin: 30px;
   text-align: right;
+  padding-left: 90px;
 }
 
+.btn-addcinema-2 {
+  margin: 30px;
+  text-align: right;
+  padding-left: 90px;
+}
 .edit {
   padding: 14px 20px;
   margin: 8px 0;
@@ -718,7 +725,7 @@ footer {
 }
 
 .movie-list .movie .movie-title a {
-  color: #84878d;
+  color: black;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -861,4 +868,8 @@ margin-bottom: 30px; }
 
     .img-center {
       text-align: center;
+    }
+
+    .footer-row{
+      padding-left:60px;
     }
