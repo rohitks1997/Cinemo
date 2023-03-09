@@ -1,3 +1,8 @@
+<?php
+require_once "db_connect.php";
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,14 +33,18 @@
             <img src="images/Cinemo Logo (No Background).png" class="avatar" alt="" width="400">
         </div>
     <div class="col-lg-7">
-        <form action="signin-check.php" method="post">
+        <form action="checksignin.php" method="post">
             <div class="signin">
             <h3>Please Sign-In</h3>
             </div>
             <div class="sessionmessage">
-            <?php if (isset($_GET['error'])) { ?>
-     		<p class="error"><?php echo $_GET['error']; ?></p>
-     	    <?php } ?>
+            <?php
+        if (isset($_SESSION["errors"])) { ?>
+          <div class='error' role='alert'>
+            <?php echo $_SESSION["errors"];
+            echo "</div>";
+            unset($_SESSION["errors"]);
+          } ?>
             </div>
             <div class="username">
                 <b>Username</b>
@@ -44,9 +53,9 @@
             <div class="password">
                 <b>Password</b>
             </div>
-            <input type="password" name="password" placeholder="Password"><br>
+            <input type="password" name="psw" placeholder="Password"><br>
             <div class="login">
-                 <button type="submit">Login</button>
+                <button type="submit" name="customerLogin">Sign In</button>
                 <br></br>
             </div>   
             <div class="signin_link">
