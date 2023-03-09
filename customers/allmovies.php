@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('../db_connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +19,8 @@
 	<!-- Loading main css file -->
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="menubar.css">
-	<link rel="stylesheet" href="moviecontainer.css">
+	<link rel="stylesheet" href="title.css">
+	<link rel="stylesheet" href="movie.css">
 
 	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
@@ -28,16 +33,16 @@
 <body>
 <div id="site-content">
         <header>
-                <a href="" id="branding">
+                <a href="index.html" id="branding">
                 <img src="Cinemo Logo.JPG" alt="logo" class="logo" width="150" padding-right="30px">
                 </a> <!-- #branding -->
                 <nav>
             <ul class="nav-area">
-				<li><a href="homepage.php">Home</a></li>
+                <li><a href="homepage.php">Home</a></li>
 				<li><a href="aboutpage.php">About</a></li>
 				<li><a href="allmovies.php">Movies</a></li>
 				<li><a href="historypage.php">History</a></li>
-                <li><a href="../signin.php">Log Out</a></li>
+                <li><a href="../signout.php">Log Out</a></li>
             </ul> 
         </nav>
         </header>
@@ -49,48 +54,47 @@
 		<!-- Page content -->
 		<!-- List of Movies Section -->
 		<main class="main-content">
-			<div class="page">
+				<div class="page">
+					<div class="row">
+						<div class="w3-container w3-padding-32">
 							<div class="title">
 								<h1 class="w3-center">Movies</h1>
-							</div>	
-							<div class="row">
-							    <div class="moviecontainer">
-							    </div>
-							    <div class="moviecontainer">
-							    </div>
-								<div class="moviecontainer">
-							    </div>							    
-								<div class="moviecontainer">
-							    </div>
-								<div class="moviecontainer">
-							    </div>
-							    <div class="moviecontainer">
-							    </div>
-								<div class="moviecontainer">
-							    </div>							    
-								<div class="moviecontainer">
-							    </div>
-								<div class="moviecontainer">
-							    </div>
-								<div class="moviecontainer">
-							    </div>
-								<div class="moviecontainer">
-							    </div>
-								<div class="moviecontainer">
-							    </div>
+								<?php
+								if (isset($_SESSION['status'])) {
+									echo $_SESSION['status'];
+									unset($_SESSION['status']);
+								};
+								?>
 							</div>
-			</div> <!-- .container -->
+							<div class="movie-list">
+								<?php
+								$i = 1;
+								$movie = $conn->query("SELECT * FROM movies ORDER BY release_date");
+								while ($row = $movie->fetch_assoc()) {
+								?>
+									<div class="movie">
+										<figure class="movie-poster"><a href="movie_reservation.php?id=<?php echo $row['movie_id']; ?>"><img src="<?php echo $row['cover_img'] ?>" alt=""></a></figure>
+										<div class="text-center">
+											<div class="movie-title"><a style="text-decoration: none;" href="movie_reservation.php?id=<?php echo $row['movie_id']; ?>"><?php echo ucwords($row['title']) ?></a></div>
+										</div>
+									</div>
+
+								<?php
+								} ?>
+							</div> <!-- .movie-list -->
+						</div>
+					</div>
 		</main>
 		<footer class="site-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2">
-					</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
 				</div>
-				<div class="colophon">Copyright 2022 Cinemo</div>
-			</div> <!-- .container -->
+			</div>
+			<div class="colophon">Copyright 2022 Cinemo</div>
+		</div> <!-- .container -->
 
-		</footer>
+	</footer>
 	<!-- Default snippet for navigation -->
 
 
