@@ -49,10 +49,10 @@
 						</div>
 						<div class="text-center">
 							<div class="btn-group">
-								<button onclick="document.location='cinemamangement.php'">Cinema Management</button>
-								<button onclick="document.location='theater_room_list.php'">Theater Room Management</button>
+								<button onclick="document.location='cinema_management.php'">Cinema Management</button>
 								<button onclick="document.location='moviemanagement.php'">Movie Management</button>
-								<button onclick="document.location='seatmaintenance.php'">Seat Maintenance</button>
+								<button onclick="document.location='theater_room_list.php'">Theater Room Management</button>
+
 							</div>
 						</div>
 					</div>
@@ -63,14 +63,11 @@
 
 	<footer class="site-footer">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-2">
-					</div>
-				</div>
+				<div class="footer-row">
 				<div class="colophon">Copyright 2022 Cinemo</div>
+				</div>
 			</div> <!-- .container -->
-
-		</footer>
+	</footer>
 	<!-- Default snippet for navigation -->
 
 
