@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,56 +28,35 @@
                 <img src="images/Cinemo Logo (No Background).png" class="avatar" alt="" width="400">
             </div>
         <div class="col-lg-7">
-            <form action="signup-check.php" method="post">
+            <form action="action.php" method="post">
                 <div class="signin">
                 <h3>Please Sign-Up</h3>
                 </div>
-                    <?php if (isset($_GET['error'])) { ?>
-     		            <p class="error"><?php echo $_GET['error']; ?></p>
-     	            <?php } ?>
-                    <?php if (isset($_GET['success'])) { ?>
-                        <p class="success"><?php echo $_GET['success']; ?></p>
-                    <?php } ?>
+                <?php
+                    if (isset($_SESSION["message"])) { ?>
+                        <div class='alert alert-danger' role='alert'>
+                        <?php echo $_SESSION["message"];
+                        echo "</div>";
+                        unset($_SESSION["message"]);
+                    } ?>
                 <div class="firstname">
-                <label for="uname"><b>First Name</b></label>
+                <b>First Name</b>
                 </div>
-                 <?php if (isset($_GET['name'])) { ?>
-                     <input type="text" 
-                        name="name" 
-                        placeholder="Enter First Name"
-                        value="<?php echo $_GET['name']; ?>"><br>
-                <?php }else{ ?>
-                     <input type="text" 
-                      name="name" 
-                      placeholder="Enter First Name"><br>
-                <?php }?>                
+                <input type="text" placeholder="Enter Name" name="name" required><br>
+                <div class="surname">
+                <b>Surname</b>
+                </div>
+                <input type="text" placeholder="Enter Surname" name="surname" required><br>
                 <div class="username">
                 <b>Username</b>
                 </div>
-                <?php if (isset($_GET['uname'])) { ?>
-                <input type="text" 
-                      name="uname" 
-                      placeholder="Enter User Name"
-                      value="<?php echo $_GET['uname']; ?>"><br>
-                <?php }else{ ?>
-                <input type="text" 
-                    name="uname" 
-                    placeholder="Enter User Name"><br>
-                <?php }?>
+                <input type="text" placeholder="Enter Username" name="uname" required><br>
                 <div class="password">
-                    <b>Password</b>
+                <b>Password</b>
                 </div>
-                <input type="password" 
-                 name="password" 
-                 placeholder="Password"><br>
-                 <div class="password">
-                    <b>Re-Enter Password</b>
-                </div>
-                <input type="password" 
-                 name="password" 
-                 placeholder="Password"><br>
+                <input type="password" placeholder="Enter Password" name="psw" required>               
                 <div class="login">
-                    <button type="submit">Sign Up</button>
+                     <button type="submit" name="SignUp">Sign Up</button>
                 </div>   
                 <div class="signin_link">
                     <span>Already created an account? <a style="text-decoration:none" href="signin.php">Sign In</a></span>
