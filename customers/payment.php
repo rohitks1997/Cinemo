@@ -1,160 +1,177 @@
+<?php
+require "../db_connect.php";
+$room_schedule_id = $_GET['id'];
+$movie = "SELECT movies.title, movies.cover_img FROM `room_schedule` JOIN movies WHERE room_schedule.movie_idd = movies.movie_id AND room_schedule.room_schedule_id = $room_schedule_id;";
+$result2 = mysqli_query($conn, $movie);
+while ($rows = mysqli_fetch_array($result2)) {
+	$moviename = $rows['title'];
+	$img = $rows['cover_img'];
+	break;
+}
+//echo "User id".$_SESSION['userid'];
+$payer_id = $_SESSION['userid'];
+?>
+
+<script>
+	var pp = parseInt(localStorage.getItem("pp"));
+	const selectedSeats = localStorage.getItem("selectedSeats");
+	var b = selectedSeats.split(',').map(function(item) {
+		return parseInt(item);
+	});
+	// console.log("SELECTED SEATS: ", b);
+	const Num = b.filter(Number);
+	// console.log(Tt);
+</script>
+
+<?php
+//$seat_chosen = '<script>document.writeln(Num); </script>';
+//$price = '<script>document.writeln(pp); </script>';
+// echo "Price CHOSEN  " . $price;
+// $paymentsql = "INSERT INTO `payment`(`payer_id`, `room_schedule_ID`, `seat_chosen`, `total_price`, `payer_name`, `payer_card_number`, `card_exp`, `CVV`, `payment_status`) VALUES ('$payer_id','$room_schedule_id','$seat_chosen','$price','Unknown','1111-2222-3333-4444','2001-01-01','999','Pending')";
+// mysqli_query($conn, $paymentsql);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Cinemo Homepage</title>
 
-		<!-- Loading third party fonts -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-   	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="menubar.css">
-		<link rel="stylesheet" href="payment.css">
+	<title>Cinemo Paymentpage</title>
 
-		
-		<!--[if lt IE 9]>
+
+	<!-- Loading third party fonts -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+	<!-- Loading main css file -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="seatingstyle.css">
+	<link rel="stylesheet" href="payment.css">
+	<link rel="stylesheet" href="menubar.css">
+
+	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 
-	</head>
+</head>
 
 
-	<body>
-	<div id="site-content">
+<body>
+<div id="site-content">
         <header>
-                <a href="" id="branding">
+                <a href="index.html" id="branding">
                 <img src="Cinemo Logo.JPG" alt="logo" class="logo" width="150" padding-right="30px">
                 </a> <!-- #branding -->
                 <nav>
             <ul class="nav-area">
-                <li><a href="homepage.php">Home</a></li>
+                <li><a href="home.php">Home</a></li>
 				<li><a href="aboutpage.php">About</a></li>
 				<li><a href="allmovies.php">Movies</a></li>
 				<li><a href="historypage.php">History</a></li>
-                <li><a href="../signin.php">Log Out</a></li>
+                <li><a href="../signout.php">Log Out</a></li>
             </ul> 
         </nav>
         </header>
 
 	</div>
-		
- <!-- .main-navigation -->
 
-          <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-  <!-- List of Movies Section -->
-  <main class="main-content">
-					<div class="page">
-						<div class="row">
+		<!-- .main-navigation -->
+
+		<!-- Page content -->
+		<!-- List of Movies Section -->
+		<main class="main-content">
+			<div class="container">
+				<div class="page">
+					<div class="row">
 						<div class="title">
-                    <h3 class="w3-center">Cinema 1</h3>
-					</div>
-					<img src="The Invitation.jpg" alt="HTML5 Icon" style="width:300px;height:300px;">
-					<div class="col">
-						<h3 class="w3-center">Ticket Information</h3>
-						<div class=w3-center>
-                        <h4>Date</h4>
-						<div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required" style="width:160px"></div>
+							<h1 class="w3-center">Payment</h1>
+							<h2></h2>
+							<h3 class="w3-center"><?php echo $moviename; ?></h3>
 						</div>
-						<div class=w3-center>
-						<h4>Time</h4>
-						<input type="text" id="cname" name="cardname" placeholder="" style="width:160px">
-						</div>
-						<div class=w3-center>
-                        <h4>Seat</h4>
-					<input type="text" id="cname" name="cardname" placeholder="" style="width:160px">
+						<img src="../images/<?php echo $img; ?>" alt="HTML5 Icon" style="width:300px;height:300px;" class="img-center">
 					</div>
-</div>
-</div>
-<div class="col-50">
-    <h3>Invitation</h3>
-	<div class="container mt-5 px-5">
 
-<div class="w3-center">
-	<h2>Payment</h2>	
-</div>
+					<form action="sendpayment.php?id=<?= $room_schedule_id ?>" method="POST">
+						<div class="row">
+							<div class="col-50">
+								<div name="Session_message">
+									<?php
+									if (isset($_SESSION["errors"])) { ?>
+										<div class='alert alert-danger' role='alert'>
+										<?php echo $_SESSION["errors"];
+										echo "</div>";
+										unset($_SESSION["errors"]);
+									} ?>
+										<h3 class="w3-center">Bank Card Information</h3>
+										<label for="Total"> Total Price</label>
+										<input type="number" id="totalprice" name="totalprice" value="0" readonly>
+										<br></br>
+										<label for="Total"> Seat selected</label>
+										<input type="text" id="seatschosen" name="seatschosen" value="0" readonly>
+										<script>
+											updateprice();
 
+											function updateprice() {
+												var Price = pp;
+												//console.log("PRICE", Price);
+												document.getElementById("totalprice").value = Price;
+											}
+											updateseat();
 
-<div class="row">
-
-<div class="col-md-15">
-	
-
-	<div class="card p-3">
-
-
-		<h6 class="text-uppercase">Payment details</h6>
-		<div class="inputbox mt-3"> <input type="text" name="name" class="form-control" required="required"> <span>Full Name</span> </div>
-		<div class="inputbox mt-3"> <input type="text" name="name" class="form-control" required="required"> <span>Email</span> </div>
-
-		<div class="row">
-
-			<div class="col-md-10">
-
-				<div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <i class="fa fa-credit-card"></i> <span>Card Number</span> 
-
+											function updateseat() {
+												var Seatschosen = Num;
+												//console.log("N", selectedSeats);
+												document.getElementById("seatschosen").value = Num;
+											}
+										</script>
+										<br></br>
+										<label for="email"><i class="fa fa-envelope"></i> Email</label>
+										<input type="text" id="email" name="email" placeholder="john@example.com">
+										<label for="fname">Accepted Cards</label>
+										<div class="icon-container">
+											<i class="fa fa-cc-visa" style="color:navy;"></i>
+											<i class="fa fa-cc-amex" style="color:blue;"></i>
+											<i class="fa fa-cc-mastercard" style="color:red;"></i>
+											<i class="fa fa-cc-discover" style="color:orange;"></i>
+										</div>
+										<label for="cname">Name on Card</label>
+										<input type="text" id="cname" name="cardname" placeholder="John More Doe">
+										<label for="ccnum">Credit card number</label>
+										<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+										<label for="expmonth">Exp Time (Month/ Year)</label>
+										<input type="month" id="exptime" name="exptime" placeholder="2022-10" min="2022-10">
+										<br></br>
+										<div class="row">
+											<div class="col-50">
+												<label for="cvv">CVV</label>
+												<input type="text" id="cvv" name="cvv" placeholder="352">
+											</div>
+										</div>
+										</div>
+								</div>
+								<div class="btn-next">
+									<button name="sendpayment" type="submit">Done</button>
+								</div>
+					</form>
 
 				</div>
-				
 
-			</div>
-
-			<div class="col-md-15">
-
-				 <div class="d-flex flex-row">
-
-
-					 <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Expiry</span> </div>
-
-				  <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>CVV</span> </div>
-					 
-
-				 </div>
-				
-
-			</div>
-			
-
-		</div>
-				
-			</div>
-
-		</div>
-
-	</div>
-
-
-	<div class="w3-center">
-				<button class="btn btn-success px-3">Pay</button>
-			</div>
-
-</div>
-
-<div class="col-md-15">
-		
-	</div>
-	
-</div>
-
-</div>
-
-
-</div>
-
-				</div> <!-- .container -->
-		</div>
+			</div> <!-- .container -->
+		</main>
 		<!-- Default snippet for navigation -->
-		
+
 		<footer class="site-footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-2">
+						<div class="widget">
+						</div>
 					</div>
 				</div>
 				<div class="colophon">Copyright 2022 Cinemo</div>
@@ -162,10 +179,10 @@
 
 		</footer>
 
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
+
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/plugins.js"></script>
+		<script src="../js/app.js"></script>
+</body>
 
 </html>
