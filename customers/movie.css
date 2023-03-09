@@ -1,0 +1,20 @@
+.movie-container{
+    margin:5px;
+    position: center;
+    background-color: rgb(146, 55, 134);
+    border-radius: 5px;
+    padding-right: 90px;
+    width: 305px;
+    height: 460px;
+    justify-content: space-between;
+  }
+
+.movie-list{
+    padding-right: 35px;
+  }
+
+  .movie-title{
+    font-family: "Lato", sans-serif;
+    color: white; 
+    padding-left: 30px; 
+  }
