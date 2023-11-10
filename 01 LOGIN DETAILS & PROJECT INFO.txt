@@ -1,0 +1,23 @@
+**Database Name: cinemaapp**
+
+**Admin Login Details**
+
+Username: admin
+Password: password
+
+
+**Theatre Login Details**
+
+Riverview Theater
+
+Username: THR760801
+Password: PWD649976
+
+Major Cineplex Rama 9
+
+Username: THR987944
+Password: PWD502718
+
+Major Cineplex Rama 3
+Username:THR604964
+Password:PWD543711
